@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body >
+    <nav>
+        <div id="room">
+            <div id="joinRoom" onclick="joinRoomPop()">JOIN ROOM</div>
+            <div id="createRoom" onclick="createRoomPop()">CREATE ROOM</div>
+        </div>
+        <div id="room2" class="hidden">
+            <div id="idNo"></div>
+            <button tupe="submit" id="leave" onclick="leave()">leave</button>
+        </div>
+        <h1 style="color: white; stroke: 2px;">Bingo</h1>
+        <div id="profile"></div>
+    </nav>
+    <main>
+        <div id="result" class="hidden">
+            <p style="position: absolute;top: 20px;">RESULT🏆</p>
+            <div id="resultDisplay"></div>
+            <div style="position: absolute;bottom: 20px;display: flex;justify-content: space-evenly;align-items: center;">
+                <button  onclick="leave()">LEAVE</button>
+                <button  onclick="hide()">CLOSE</button>
+            </div>
+        </div>
+        <div id="block" class="hidden" onclick="isReady()"></div>
+        <div id="start" onclick="start()" class="hidden">READY</div>
+        <div id="joinRoomPop" class="hidden">
+            <div id="close" onclick="hide()">X</div>
+            <input type="file" name="img" id="Jimg" accept=".jpg, .png, .img">
+            <input type="text" name="name" id="Jname" placeholder="Enter your name">
+            <input type="number" name="roomId" id="roomId" placeholder="Enter Room ID">
+            <button onclick="joinRoom()">DONE</button>
+        </div>
+        <div id="createRoomPop" class="hidden">
+            <div id="close" onclick="hide()">X</div>
+            <input type="file" name="img" id="img" accept="image/*">
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+            <div>
+                <input type="radio" name="boxSize" id="X5" value="5">X5
+                <input type="radio" name="boxSize" id="X6" value="6">X6
+                <input type="radio" name="boxSize" id="X7" value="7">X7
+            </div>
+            <button onclick="createRoom()">CREATE ROOM</button>
+        </div>
+        <div id="outerBox"></div>
+    </main>
+    <footer>
+        <div id="players"></div>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/socketScript.js"></script>
+    <script src="/script.js"></script>
+    <script src="/players.js"></script>
+    <script src="/userDetails.js"></script>
+    <script src="/timer.js"></script>
+    <script src="/gameStart.js"></script>
+</body>
+</html>

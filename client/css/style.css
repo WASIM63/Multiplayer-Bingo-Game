@@ -1,0 +1,368 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    padding:0 20px 0 20px;
+    height:50px;
+    width:100vw;
+    background-color: green;
+    position: sticky;
+    top:0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    position: relative;
+    right:150px;
+}
+#room{
+    height:90%;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#room div{
+    height:80%;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 5px;
+    text-align: center;
+    align-content: center;
+    color: white;
+}
+#joinRoom{
+    background-color: blue;
+}
+#createRoom{
+    background-color: brown;
+}
+.visible{
+    visibility: visible;
+}
+.hidden{
+    visibility: hidden;
+}
+
+#room2{
+    position: absolute;
+    z-index:2;
+    height:50px;
+    width:300px;
+    background-color:rgb(13, 217, 13);
+    top:0px;
+    left:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#room2 div{
+    width:80%;
+    height:80%;
+    text-align: center;
+    align-content: center;
+    left:5px;
+}
+#room2 button{
+    width:30%;
+    height:80%;
+    align-content: center;
+    background-color: red;
+    color: white;
+}
+#createRoomPop{
+    height:300px;
+    width:500px;
+    position:absolute;
+    z-index:10;
+    place-content: center;
+    border:2px solid black;
+    background-color: rgb(212, 230, 230);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:10px 10px 10px 10px gray;
+}
+#joinRoomPop{
+    height:300px;
+    width:500px;
+    position:absolute;
+    z-index:10;
+    place-content: center;
+    border:2px solid black;
+    background-color: rgb(212, 230, 230);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:10px 10px 10px 10px gray;
+}
+#createRoomPop input,#joinRoomPop input{
+    margin:10px;
+}
+#joinRoom:hover{
+    cursor: pointer;
+}
+#createRoom:hover{
+    cursor: pointer;
+}
+#close{
+    height:30px;
+    width:30px;
+    background-color: red;
+    position: absolute;
+    right:0px;
+    top:0px;
+    text-align: center;
+    align-items: center;
+    border-radius: 0px 20px 0px 0px;
+}
+
+#profile{
+    height:90%;
+    width: 45px;
+    border-radius: 50%;
+    background-color: yellow;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+#outerBox{
+    position: relative;
+    /* z-index: -1; */
+    top:10vh;
+    height:25em;
+    width:25em;
+    background-color: antiquewhite;
+    border:1px solid gray;
+    display:flex;
+    flex-wrap: wrap;
+    box-sizing:content-box;
+}
+footer{
+    height:100px;
+    width: 100vw;
+    background-color: darkslategray;
+    position:absolute;
+    bottom:0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#popOutRoom form input,button{
+    margin: 5px;
+}
+#img,#Jimg{
+    height:100px;
+    width: 100px;
+    border:1px solid gray;
+    /* background-image: url('/images/Screenshot\ 2024-11-03\ 232042.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.cell{
+    height:5rem;
+    width:5rem;
+    border:0.5px solid gray;
+    font-size:25px;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.circle{
+    position: absolute;
+    z-index: 1;
+    height:3rem;
+    width:3rem;
+    animation: clickAnimation 1s ease-in;
+    background-color: aquamarine;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+@keyframes clickAnimation {
+    from{ background-color: red;}
+    to{ background-color: aquamarine;}
+}
+
+#boxSize button{
+    width: 50px;
+}
+.rowLine{
+    height:2px;
+    width: 5rem;
+    border: 2px solid black;
+    position: absolute;
+    z-index:3;
+}
+.colLine{
+    height:5rem;
+    width: 2px;
+    border: 2px solid black;
+    position: absolute;
+    z-index:3;
+}
+.leftDiagonalLine{
+    height:7.2rem;
+    width: 2px;
+    border: 2px solid black;
+    position: absolute;
+    z-index:3;
+    rotate:-45deg;
+}
+.rightDiagonalLine{
+    height:7.2rem;
+    width: 2px;
+    border: 2px solid black;
+    position: absolute;
+    z-index:3;
+    rotate: 45deg;
+}
+
+#players{
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.player{
+    height:5rem;
+    width:5rem;
+    background-color: aliceblue;
+    border:1px solid white;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    align-content: center;
+}
+.timerRing{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    box-sizing: content-box;
+}
+/* .switch-player{
+    overflow: hidden;
+    background: linear-gradient(to right,yellow 50%,transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: background-fill-animation 2s ease forwards;
+}
+@keyframes background-fill-animation {
+    to {
+      background-position: 0 0;
+    }
+  } */
+
+.timerRingAfterWinning{
+    background-color: gold;
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start{
+    height:100px;
+    width:500px;
+    box-shadow:10px 10px 10px 10px rgb(75, 114, 114);
+    border: 2px solid black;
+    border-radius: 20px;
+    position: absolute;
+    margin: auto 0px;
+    top:40vh;
+    z-index: 10;
+    background-color: aqua;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    text-align: center;
+    align-content: center;
+}
+#block{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    top:50px;
+}
+.st{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-image: url(/images/1st.png);
+    background-position: center;
+    background-size: cover;
+}.nd{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-image: url(/images/2nd.png);
+    background-position: center;
+    background-size: cover;
+}
+.rd{
+    height:6rem;
+    width:6rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-image: url(/images/3rd.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#result{
+    height:20rem;
+    width:40rem;
+    position:absolute;
+    z-index:10;
+    place-content: center;
+    border:2px solid black;
+    background-color: rgb(247, 246, 248);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:10px 10px 10px 10px gray;
+    top:200px;
+}
+#resultDisplay{
+    position:absolute;
+    z-index:11;
+    height: fit-content;
+    width:fit-content;
+}
